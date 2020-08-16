@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Aileen Murphy</title>
+      <link rel="stylesheet" href="final.css"/>
+      <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Beth+Ellen|Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+      <div class="topnav">
+          <a href="home.html">Home</a>
+          <a class = "active" href="page1.html">Things to Do</a>
+          <a href="page2.html">What to Pack</a>
+          <a href="page3.html">Food to Eat</a>
+          <a href = "page4.html">Contact</a>
+      </div>
+      <!--Sources for Map:-->
+  <!--https://developers.google.com/maps/documentation/javascript/importing_data-->
+  <!--https://latitude.to/articles-by-country/is/iceland-->
+      <div id="map"></div>
+      <script>
+            function initMap() {
+            // The location of Uluru
+            var reyk = {lat: 64.13548, lng: -21.89541};
+            var park = {lat: 64.254832314, lng:-21.12166618  };
+            var gulf = {lat: 64.322332044, lng: -20.119332856};
+            var geysir= {lat: 64.3166737333 , lng: -20.2932721602 };
+            var kerid= {lat: 64.044231, lng: -20.913133 };
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 8, center: reyk});
+            var marker = new google.maps.Marker({position: reyk, map: map});
+            var marker = new google.maps.Marker({position: park, map: map});        
+            var marker = new google.maps.Marker({position: gulf, map: map});       
+            var marker = new google.maps.Marker({position: geysir, map: map});   
+            var marker = new google.maps.Marker({position: kerid, map: map});
+            }
+        </script>
+        <script async defer   
+            src="https://maps.googleapis.com/maps/api/js?key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&callback=initMap">
+        </script>
+        <div class = "scroll_container"style="border:1px solid black;overflow-y:scroll;overflow-x:hidden; float: left">
+            <div style="height:250%;"> 
+                <div class = "scroll_div">
+                <h2 style = "font-family: 'Amatic SC', cursive; font-size: 50px">The Golden Circle</h2>
+                <p>We packed a lot of sightseeing and traveling into one week. There are so many beautiful places to see in Iceland that are so unique. 
+                    We spent the first three days in Reykjavík, and then traveled to the southern region of Iceland. I recommend renting a 4x4 vehicle as 
+                    your method of traveling. With a car, we were able to travel at our own pace and see way more places than we would have been on a bus (the first 
+                    time I went to Iceland I took a bus tour, and I really think renting a car was a much better experience). They drive on the right side of the road, 
+                    and there is not too much traffic even in the city. I recommend a 4x4 vehicle because some roads you may want to go on are dirt roads (for example, one 
+                    of the Airbnb's I stayed in was off of a rough road that only 4x4 vehicles could go on). You can find updated information on the condition of roads 
+                    <a href="http://www.road.is/">here</a> on the official website for The Icelandic Road and Coastal Administration (IRCA). 
+                </p>
+                <p>
+                    The Golden Circle is an extremely popular travel route that can be done in one day by car. Þingvellir National Park, Geysir Geothermal Field, Gullfoss, 
+                    and Kerið crater are the main stops. It is very easy to travel through the Golden Circle from Reykjavík. 
+                </p>
+                <h4 style="text-align: center">Þingvellir National Park</h4>
+                <img src = "park.jpg" alt = "Thingvellir National Park" style="width:100%"class = "scroll_pic">
+                <p>Our first stop on the Golden Circle was Þingvellir National Park. It is famous for both its historical significance and unique geology. 
+                    Iceland is the only place in the world where you can see the Mid-Atlantic rift valley above sea level. 
+                </p>
+                <h4 style="text-align: center">Geysir Geothermal Field</h4>
+                <img src = "geysir4.jpg" alt = "Geysir Geothermal Field" style="width:100%" class = "scroll_pic">
+                <p>The Geysir Hot Spring Area is a geothermal field that contains a highly active geysir, Strokkur. It spouts boiling water 100 feet into the air 
+                    every few minutes. 
+                </p>
+                <h4 style="text-align: center">Gulfoss</h4>
+                <img src = "gulfoss.jpg" alt = "Gullfoss waterfall" style="width:100%"class = "scroll_pic">
+                <p>Gullfoss is a very popular waterfall to visit in Iceland. There is a narrow path that brings you to the bottom and upper tier of this two-tiered waterfall. 
+                    Make sure to bring your rainjacket here especially if you plan to go to the lower tier. 
+                </p>
+                <h3 style="text-align: center">Kerið</h3>
+                <img src = "kerid.jpg" alt = "Kerid crater" style="width:100%"class = "scroll_pic">
+                <p>Kerið is a volcanic crater lake surrounded by uniquely red volcanic rock. You can walk around the top of the crater, as well as descend to 
+                    the bottom of the crater to the lake. As of 2019, there is an entrance fee of 400 ISK. 
+                </p>
+                </div>
+            </div>
+        </div>
+  </body>
+  </html>
